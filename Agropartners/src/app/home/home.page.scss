@@ -1,0 +1,440 @@
+.fondo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.fondo img {
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    //background-image: url("../../assets/images/green-plants-on-ground-2433517.jpg");
+    //background-image: url("../../assets/images/close-up-photo-of-corns-during-daytime-2875698.jpg");
+    background-image: url("../../assets/images/GettyImages-700685692.jpg")!important;
+    //background-image: url("../../assets/images/pexels-110643.jpg")!important; //Like this
+    background-size: cover;
+    //background: fixed;
+    position: relative;
+    //opacity: 0.9;
+    //filter: contrast(50%);
+}
+
+//Header vista home
+.header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.header .btn {
+    width: 35%; //100%
+    height: 50%; //100%
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0px auto auto;
+    //box-shadow: 0px 14px 25px rgba(250, 244, 244, 0.473);
+    //border-radius: 15px;
+    //border-bottom: 5px solid;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgba(36, 35, 35, 0.6);
+    outline: none;
+}
+
+.header .head {
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+
+.head .head1 p {
+    font-size: 120%; //160%
+    //margin: 0px 0px 14px 20px;
+    margin: auto;
+    font-family: 'Arial';
+    width: 70%;
+    color: whitesmoke;
+    opacity: 0.8;
+}
+
+
+/*.head .head2 p {
+    font-size: 90%;
+    margin: 2px 0px 0px 20px;
+    font-family: 'Arial';
+    letter-spacing: 1px;
+    width: 70%;
+    color: whitesmoke;
+    opacity: 0.8;
+    text-transform: capitalize;
+}*/
+
+.header .head3 {
+    //padding-top: 11px;
+    width: 70px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.head3 .icon_head {
+    width: 50%;
+    height: 50%;
+    color: whitesmoke;
+    opacity: 0.8;
+}
+
+.demo {
+    position: absolute;
+    z-index: 999;
+}
+
+//Parte media de la aplicacion y pronosticos
+.mid {
+    width: 100%;
+    height: 60%;
+    //background-color: blue;
+}
+
+.mid .midinit {
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px 10px 10px;
+    background-color: rgba(36, 35, 35, 0.7); //fondo mid + clima aqui
+    opacity: 0;
+    pointer-events: none;
+    //Animacion
+    //animation: move 2s linear;
+    animation-iteration-count: 1;
+    overflow: hidden;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translate(320px);
+    }
+    50% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translate(0px);
+    }
+    50% {
+        transform: translate(320px);
+    }
+}
+
+.mid_slide {
+    padding: 0px 2px;
+}
+
+//TODAY
+.today {
+    height: 25%;
+}
+
+.today:last-child {
+    padding-bottom: 2%;
+}
+
+.today_title {
+    height: auto;
+}
+
+.today_container {
+    height: 80%;
+}
+
+.today_container ion-slides {
+    height: 100%;
+}
+
+.midinit .today .today_title p {
+    margin: 5px 0px;
+    color: white;
+}
+
+.today_container p {
+    margin: 5px 0px;
+    font-size: 10px;
+}
+
+.today_container .today1_temp {
+    //width: 90px;
+    width: 90%;
+    //height: 80px;
+    height: 75%;
+    margin: 0px; //ver Aqui
+}
+
+.today1_temp {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    //background-color: rgba(4, 41, 26, 0.5);
+    background-color: rgba(21, 120, 138, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+
+/*todos titulo*/
+
+.today1_temp .today1_temp0 .today1_temp0_title p,
+.today2_temp .today2_temp0 .today2_temp0_title p,
+.today3_temp .today3_temp0 .today3_temp0_title p,
+.today4_temp .today4_temp0 .today4_temp0_title p {
+    margin: 0px;
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*Todos titulo*/
+
+.today1_temp .today1_icon {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.today1_icon .icon_temp {
+    width: 80%;
+    height: 80%;
+}
+
+.today1_temp1 p {
+    font-size: 16px;
+    margin: 12px 0px 0px 0px;
+}
+
+//TOMORROW
+.tomorrow .tomorrow_title p {
+    margin: 5px 0px;
+    color: white;
+}
+
+.tomorrow .tomorrow_container p {
+    margin: 5px 0px;
+    font-size: 10px;
+}
+
+.tomorrow_container .today2_temp {
+    width: 90px;
+    height: 80px;
+    margin: 0px;
+}
+
+.today2_temp {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(4, 41, 26, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+.today2_temp .today2_icon {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.today2_icon .icon_temp {
+    width: 80%;
+    height: 80%;
+}
+
+.tomorrow .today2_temp1 p {
+    font-size: 16px;
+    margin: 12px 0px 0px 0px;
+}
+
+//NEXT
+.next .next_title p {
+    margin: 5px 0px;
+    color: white;
+}
+
+.next .next_container p {
+    margin: 5px 0px;
+    font-size: 10px;
+}
+
+.next_container .today3_temp {
+    width: 90px;
+    height: 80px;
+    margin: 0px;
+}
+
+.today3_temp {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 120, 138, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+.today3_temp .today3_icon {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.today3_icon .icon_temp {
+    width: 80%;
+    height: 80%;
+}
+
+.next .today3_temp1 p {
+    font-size: 16px;
+    margin: 12px 0px 0px 0px;
+}
+
+//LASTED
+.lasted .lasted_title p {
+    margin: 5px 0px;
+    color: white;
+}
+
+.lasted .lasted_container p {
+    margin: 5px 0px;
+    font-size: 10px;
+}
+
+.lasted_container .today4_temp {
+    width: 90px;
+    height: 80px;
+    margin: 0px;
+}
+
+.today4_temp {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(4, 41, 26, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+.today4_temp .today4_icon {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.today4_icon .icon_temp {
+    width: 80%;
+    height: 80%;
+}
+
+.lasted .today4_temp1 p {
+    font-size: 16px;
+    margin: 12px 0px 0px 0px;
+}
+
+//Pie de pagina de la aplicacion
+.foot {
+    width: 100%;
+    height: 25%;
+    //background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    //filter: contrast(50%);
+    //background-color: rgba(36, 35, 35, 0.7);
+}
+
+.foot1 {
+    width: 100%;
+    filter: none;
+    //height: 80%;
+    //background-color: white;
+}
+
+.contenedor {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 10px 0px;
+}
+
+//contenedor de iconos
+.contenedor .contenedor_icon {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    //background-color: seagreen;
+    //background-color: black;
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    //opacity: 0.8;
+}
+
+.contenedor .contenedor_icon .contenedor_icon2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+}
+
+.contenedor_icon .icono {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    bottom: 10px;
+    color: white;
+}
+
+.contenedor .cont_texto {
+    font-size: 10px;
+    color: white;
+}
+
+.mapa {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}

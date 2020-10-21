@@ -1,0 +1,481 @@
+<ion-content id="all">
+
+    <div class="fondo" id="fondo">
+        <!--<img src="../../assets/images/pexels-110643.jpg" alt="">-->
+        <!--<img src="../../assets/images/imgFondo-4.png" alt="">-->
+    </div>
+    <div class="back" id="back">
+        <div class="demo">
+            <span>Version de Prueba <br>Tiempo restante: {{segundos}}</span>
+        </div>
+        <div class="header" id="init">
+            <button class="btn" color="new" (click)="iniciarPronostico()">
+          <div class="head">
+              <div class="head1">
+                  <p>{{actual}}°C</p>
+              </div>
+              <!--<div class="head2">
+                  <p>{{tempActual.ciudad}}</p>
+              </div>-->
+          </div>
+          <div class="head3">
+              <ion-icon name="{{clima}}" class="icon_head"></ion-icon>
+          </div>
+      </button>
+        </div>
+        <div class="mid" id="medio">
+            <div class="midinit" id="medio1">
+                <div class="today">
+                    <div class="today_title">
+                        <p>Hoy</p>
+                    </div>
+                    <div class="today_container">
+                        <ion-slides pager="false" [options]="slideView" #slideWithNav (ionSlideDrag)="ionSlideDrag(slider,slideWithNav)">
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp today1_special">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Temperatura</p>
+                                        </div>
+                                        <div class="today1_temp1">
+                                            <!--{{tempActual.temperaturaMin}}°/{{tempActual.temperaturaMax}}-->
+                                            <p>{{tempMin}}°/{{tempMax}}°</p>
+                                        </div>
+                                        <div class="today1_temp2">
+                                            <p>Min/Max</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Clima</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="{{clima}}" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.clima}}-->
+                                            <p>{{descripcion}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Presión</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="ios-analytics" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.presion}}-->
+                                            <p>{{presion}} hpa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Humedad</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="md-thermometer" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.humedad}}-->
+                                            <p>{{humedad}}%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Viento</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="ios-paper-plane" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.velocidad}}-->
+                                            <p>{{viento}} m/s</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                        </ion-slides>
+                    </div>
+                </div>
+                <!--Espacio-->
+                <div class="today" *ngFor="let p of forecastList">
+                    <div class="today_title">
+                        <p>{{p.dia}}</p>
+                    </div>
+                    <div class="today_container">
+                        <ion-slides pager="false" [options]="slideView" #slideWithNav (ionSlideDrag)="ionSlideDrag(slider,slideWithNav)">
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp today1_special">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Temperatura</p>
+                                        </div>
+                                        <div class="today1_temp1">
+                                            <!--{{tempActual.temperaturaMin}}°/{{tempActual.temperaturaMax}}-->
+                                            <p>{{p.temp_min}}°/{{p.temp_max}}°</p>
+                                        </div>
+                                        <div class="today1_temp2">
+                                            <p>Min/Max</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Clima</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="{{p.main}}" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.clima}}-->
+                                            <p>{{p.description}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Presión</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="ios-analytics" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.presion}}-->
+                                            <p>{{p.pressure}} hpa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Humedad</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="md-thermometer" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.humedad}}-->
+                                            <p>{{p.humidity}}%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                            <ion-slide class="mid_slide">
+                                <div class="today1_temp">
+                                    <div class="today1_temp0">
+                                        <div class="today1_temp0_title">
+                                            <p>Viento</p>
+                                        </div>
+                                        <div class="today1_icon">
+                                            <ion-icon name="ios-paper-plane" class="icon_temp"></ion-icon>
+                                        </div>
+                                        <div>
+                                            <!--{{tempActual.velocidad}}-->
+                                            <p>{{p.speed}} m/s</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-slide>
+                        </ion-slides>
+                    </div>
+                </div>
+                <!--<div class="tomorrow">
+              <div class="tomorrow_title">
+                  <p>Mañana</p>
+              </div>
+              <div class="tomorrow_container">
+                  <ion-slides pager="false" [options]="slideView" #slideWithNav (ionSlideDrag)="ionSlideDrag(slider,slideWithNav)">
+                      <ion-slide class="mid_slide">
+                          <div class="today2_temp today1_special">
+                              <div class="today2_temp0">
+                                  <div class="today2_temp0_title">
+                                      <p>Temperatura</p>
+                                  </div>
+                                  <div class="today2_temp1">
+                                      <p>°/°</p>
+                                  </div>
+                                  <div class="today2_temp2">
+                                      <p>Min/Max</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today2_temp">
+                              <div class="today2_temp0">
+                                  <div class="today2_temp0_title">
+                                      <p>Clima</p>
+                                  </div>
+                                  <div class="today2_icon">
+                                      <ion-icon name="sunny" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p></p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today2_temp">
+                              <div class="today2_temp0">
+                                  <div class="today2_temp0_title">
+                                      <p>Presión</p>
+                                  </div>
+                                  <div class="today2_icon">
+                                      <ion-icon name="ios-analytics" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p> hpa</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today2_temp">
+                              <div class="today2_temp0">
+                                  <div class="today2_temp0_title">
+                                      <p>Humedad</p>
+                                  </div>
+                                  <div class="today2_icon">
+                                      <ion-icon name="md-thermometer" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p>%</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today2_temp">
+                              <div class="today2_temp0">
+                                  <div class="today2_temp0_title">
+                                      <p>Viento</p>
+                                  </div>
+                                  <div class="today2_icon">
+                                      <ion-icon name="ios-paper-plane" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p>m/s</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                  </ion-slides>
+              </div>
+          </div>
+          <div class="next">
+              <div class="next_title">
+                  <p>Miercoles</p>
+              </div>
+              <div class="next_container">
+                  <ion-slides pager="false" [options]="slideView" #slideWithNav (ionSlideDrag)="ionSlideDrag(slider,slideWithNav)">
+                      <ion-slide class="mid_slide">
+                          <div class="today3_temp today1_special">
+                              <div class="today3_temp0">
+                                  <div class="today3_temp0_title">
+                                      <p>Temperatura</p>
+                                  </div>
+                                  <div class="today3_temp1">
+                                      <p>°/°</p>
+                                  </div>
+                                  <div class="today3_temp2">
+                                      <p>Min/Max</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today3_temp">
+                              <div class="today3_temp0">
+                                  <div class="today3_temp0_title">
+                                      <p>Clima</p>
+                                  </div>
+                                  <div class="today3_icon">
+                                      <ion-icon name="sunny" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p></p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today3_temp">
+                              <div class="today3_temp0">
+                                  <div class="today3_temp0_title">
+                                      <p>Presión</p>
+                                  </div>
+                                  <div class="today3_icon">
+                                      <ion-icon name="ios-analytics" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p> hpa</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today3_temp">
+                              <div class="today3_temp0">
+                                  <div class="today3_temp0_title">
+                                      <p>Humedad</p>
+                                  </div>
+                                  <div class="today3_icon">
+                                      <ion-icon name="md-thermometer" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p>%</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today3_temp">
+                              <div class="today3_temp0">
+                                  <div class="today3_temp0_title">
+                                      <p>Viento</p>
+                                  </div>
+                                  <div class="today3_icon">
+                                      <ion-icon name="ios-paper-plane" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p> m/s</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                  </ion-slides>
+              </div>
+          </div>
+          <div class="lasted">
+              <div class="lasted_title">
+                  <p>Jueves</p>
+              </div>
+              <div class="lasted_container">
+                  <ion-slides pager="false" [options]="slideView" #slideWithNav (ionSlideDrag)="ionSlideDrag(slider,slideWithNav)">
+                      <ion-slide class="mid_slide">
+                          <div class="today4_temp today1_special">
+                              <div class="today4_temp0">
+                                  <div class="today4_temp0_title">
+                                      <p>Temperatura</p>
+                                  </div>
+                                  <div class="today4_temp1">
+                                      <p>°/°</p>
+                                  </div>
+                                  <div class="today4_temp2">
+                                      <p>Min/Max</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today4_temp">
+                              <div class="today4_temp0">
+                                  <div class="today4_temp0_title">
+                                      <p>Clima</p>
+                                  </div>
+                                  <div class="today4_icon">
+                                      <ion-icon name="sunny" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p></p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today4_temp">
+                              <div class="today4_temp0">
+                                  <div class="today4_temp0_title">
+                                      <p>Presión</p>
+                                  </div>
+                                  <div class="today4_icon">
+                                      <ion-icon name="ios-analytics" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p> hpa</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today4_temp">
+                              <div class="today4_temp0">
+                                  <div class="today4_temp0_title">
+                                      <p>Humedad</p>
+                                  </div>
+                                  <div class="today4_icon">
+                                      <ion-icon name="md-thermometer" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p>%</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                      <ion-slide class="mid_slide">
+                          <div class="today4_temp">
+                              <div class="today4_temp0">
+                                  <div class="today4_temp0_title">
+                                      <p>Viento</p>
+                                  </div>
+                                  <div class="today4_icon">
+                                      <ion-icon name="ios-paper-plane" class="icon_temp"></ion-icon>
+                                  </div>
+                                  <div>
+                                      <p> m/s</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </ion-slide>
+                  </ion-slides>
+              </div>
+          </div>-->
+            </div>
+        </div>
+        <div class="foot" id="pie">
+            <div class="foot1">
+                <ion-slides pager="false" [options]="slideForm" #slideWithNav (ionSlideDrag)="ionSlideDrag(slider,slideWithNav)">
+                    <ion-slide *ngFor="let s of slider.slidesItems">
+                        <div class="contenedor">
+                            <ion-button class="contenedor_icon" (click)="callPage($event,s.page)" color="new" id="boton">
+                                <!--id="{{s.id}}-->
+                                <div class="contenedor_icon2">
+                                    <ion-icon name="{{s.icon}}" class="icono"></ion-icon>
+                                </div>
+                            </ion-button>
+                            <div class="cont_texto">
+                                <p>{{s.nombre}}</p>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+</ion-content>

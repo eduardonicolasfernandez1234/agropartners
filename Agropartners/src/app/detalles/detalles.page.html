@@ -1,0 +1,42 @@
+<ion-content>
+    <div class="back">
+        <div class="back_header"></div>
+        <div class="header">
+            <div class="header_icon">
+                <button class="btn_head" (click)="backHome()">
+                    <ion-back-button defaultHref=""></ion-back-button>
+              </button>
+            </div>
+            <div class="head">
+                <h1>{{titulo}}</h1>
+            </div>
+        </div>
+        <div class="contenido">
+            <ion-card *ngFor="let f of listaActual" class="cards">
+                <div class="cont_img">
+                    <ion-slides pager="false" [options]="slideForm" #slideWithNav>
+                        <ion-slide *ngFor="let i of f.lista">
+                            <div class="contenido_img">
+                                <img src="{{i.img}}" alt="">
+                            </div>
+                        </ion-slide>
+                    </ion-slides>
+                </div>
+                <ion-card-header class="card_header">
+                    <ion-card-subtitle class="card_subtitle">{{f.segundo}}</ion-card-subtitle>
+                    <ion-card-title class="card_title">{{f.primero}}</ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content class="card_content">
+                    <p id="cardTexto">
+                        {{f.tercero}}
+                    </p>
+                </ion-card-content>
+                <ion-item>
+                    <ion-label class="card_label">{{f.cuarto}}</ion-label>
+                    <ion-button fill="outline" slot="end" class="btn_card" color="prueba" (click)="callItem($event,f)">Info</ion-button>
+                </ion-item>
+            </ion-card>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-content>
+    <div class="back">
+        <div class="header">
+            <div class="header_icon">
+                <button class="btn_head" (click)="backList()">
+                <ion-icon name="arrow-back"></ion-icon>
+              </button>
+            </div>
+            <div class="header_title">
+                <h1>{{lista.primero}}</h1>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cont_img">
+                <ion-slides pager="false" [options]="slideForm" #slideWithNav>
+                    <ion-slide *ngFor="let i of lista.lista">
+                        <div class="contenido_img">
+                            <img src="{{i.img}}" alt="">
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+            <div class="contenido">
+                <p>{{lista.segundo}}</p>
+                <p>{{lista.tercero}}</p>
+                <p>{{lista.cuarto}}</p>
+            </div>
+            <div class="cont_img2">
+                <ion-slides pager="false" [options]="slideForm2" #slideWithNav>
+                    <ion-slide *ngFor="let i of lista.lista">
+                        <div class="contenido_img2">
+                            <img src="{{i.img}}" alt="">
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+            <div class="contenido">
+                <p>{{lista.quinto}}</p>
+                <p>{{lista.sexto}}</p>
+                <p>{{lista.septimo}}</p>
+            </div>
+        </div>
+    </div>
+</ion-content>

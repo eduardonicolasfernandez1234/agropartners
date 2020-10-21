@@ -1,0 +1,51 @@
+<ion-content>
+    <div class="back">
+        <div class="header">
+            <div class="header_icon">
+                <button class="btn_head" (click)="backHome()">
+                  <ion-back-button defaultHref=""></ion-back-button>
+              </button>
+            </div>
+            <div class="head">
+                <h1>Productos</h1>
+            </div>
+        </div>
+        <div class="contenido">
+            <div class="semilla cont">
+                <button class="contenido_btn" (click)="llamarLista($event,'semilla')">
+              <p>Semilla</p>
+          </button>
+            </div>
+            <div class="herbicida cont">
+                <button class="contenido_btn" (click)="llamarLista($event,'herbicida')">
+                  <p>Herbicida</p>
+              </button>
+            </div>
+            <div class="fungicida cont">
+                <button class="contenido_btn" (click)="llamarLista($event,'fungicida')">
+                  <p>Fungicida</p>
+              </button>
+            </div>
+            <div class="insecticida cont">
+                <button class="contenido_btn" (click)="llamarLista($event,'insecticida')">
+                  <p>Insecticida</p>
+               </button>
+            </div>
+            <div class="fertilizante cont">
+                <button class="contenido_btn" (click)="llamarLista($event,'fertilizante')">
+                  <p>Fertilizante</p>
+              </button>
+            </div>
+            <div class="coadyugante cont">
+                <button class="contenido_btn" (click)="llamarLista($event,'coadyugante')">
+                  <p>Coadyugante</p>
+              </button>
+            </div>
+            <div class="tratamiento cont">
+                <button class="contenido_btn" (click)="llamarLista($event,'tratamiento')">
+                  <p>Tratamiento de Semilla</p>
+              </button>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,227 @@
+<ion-content>
+    <div class="content">
+        <header>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="home"></ion-back-button>
+            </ion-buttons>
+            <h1>
+                Ubicaciones
+            </h1>
+        </header>
+        <main>
+            <div class="main-container">
+                <div class="slider">
+                    <span class="slider-nav arrow-prev left" (click)="slidePrev(sliderOne,slideWithNav)">
+                        <ion-icon name="arrow-dropleft" class="left"></ion-icon>
+                    </span>
+                    <span class="slider-nav arrow-next right" (click)="slideNext(sliderOne,slideWithNav)">
+                        <ion-icon name="arrow-dropright" class="right"></ion-icon>
+                    </span>
+                    <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav>
+                        <ion-slide>
+                            <ion-card>
+                                <div class="header-card">
+                                    <h2>
+                                        Santa Cruz de la Sierra
+                                    </h2>
+                                </div>
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.807980835192!2d-63.154527685422224!3d-17.757814095546276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e63256d81097%3A0x3b109cb4c5c9a0ec!2sAgroPartners!5e0!3m2!1ses!2sbo!4v1561857585951!5m2!1ses!2sbo"
+                                        style="border: 0px none;" allowfullscreen="" width="600" height="650" frameborder="0"></iframe>
+                                </div>
+                                <div class="info-card">
+                                    <h3>
+                                        Casa Matriz
+                                    </h3>
+                                    <p>
+                                        (+591)33490100
+                                    </p>
+                                    <a id="email" href="mailto:info@agropartners.com.bo">
+                                        <p>
+                                            info@agropartners.com.bo
+                                        </p>
+                                    </a>
+                                </div>
+                            </ion-card>
+                        </ion-slide>
+                        <ion-slide>
+                            <ion-card>
+                                <div class="header-card">
+                                    <h2>
+                                        Okinawa 1
+                                    </h2>
+                                </div>
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3810.938985525683!2d-62.9027504855541!3d-17.221748988178103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDEzJzE4LjMiUyA2MsKwNTQnMDIuMCJX!5e0!3m2!1ses!2sbo!4v1561857749948!5m2!1ses!2sbo"
+                                        style="border: 0px none;" allowfullscreen="" width="600" height="450" frameborder="0"></iframe>
+                                </div>
+                                <div class="info-card">
+                                    <h3>
+                                        Sergio Bejarano Renfije
+                                    </h3>
+                                    <p>
+                                        +591 71320535
+                                    </p>
+                                    <a id="email" href="mailto:okinawa@agropartners.com.bo">
+                                        <p>
+                                            okinawa@agropartners.com.bo
+                                        </p>
+                                    </a>
+                                    <p>
+                                        Zona Norte
+                                    </p>
+
+                                </div>
+                            </ion-card>
+                        </ion-slide>
+                        <ion-slide>
+                            <ion-card>
+                                <div class="header-card">
+                                    <h2>
+                                        San Juan de Yapacani
+                                    </h2>
+                                </div>
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.534528918944!2d-63.851846985553195!3d-17.28974008813719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDE3JzIzLjEiUyA2M8KwNTAnNTguOCJX!5e0!3m2!1ses!2sbo!4v1561857853281!5m2!1ses!2sbo"
+                                        style="border: 0px none;" allowfullscreen="" width="600" height="450" frameborder="0"></iframe>
+                                </div>
+                                <div class="info-card">
+                                    <h3>
+                                        Bernabe Fuentes Valda
+                                    </h3>
+                                    <p>
+                                        +591 71320506
+                                    </p>
+                                    <a id="email" href="mailto:yapacani@agropartners.com">
+                                        <p>
+                                            yapacani@agropartners.com
+                                        </p>
+                                    </a>
+                                    <p>
+                                        Zona Norte
+                                    </p>
+                                </div>
+                            </ion-card>
+                        </ion-slide>
+                        <ion-slide>
+                            <ion-card>
+                                <div class="header-card">
+                                    <h2>
+                                        Cuatro Cañadas
+                                    </h2>
+                                </div>
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.8230601498526!2d-62.55785928555341!3d-17.275793188145546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDE2JzMyLjkiUyA2MsKwMzMnMjAuNCJX!5e0!3m2!1ses!2sbo!4v1561857986478!5m2!1ses!2sbo"
+                                        style="border: 0px none;" allowfullscreen="" width="600" height="450" frameborder="0"></iframe>
+                                </div>
+                                <div class="info-card">
+                                    <h3>
+                                        Rafael Gonzales Flores
+                                    </h3>
+                                    <p>
+                                        +591 71320507
+                                    </p>
+                                    <a id="email" href="mailto:4canadas@agropartners.com">
+                                        <p>
+                                            4canadas@agropartners.com
+                                        </p>
+                                    </a>
+                                    <p>
+                                        Zona Este
+                                    </p>
+                                </div>
+                            </ion-card>
+                        </ion-slide>
+                        <ion-slide>
+                            <ion-card>
+                                <div class="header-card">
+                                    <h2>
+                                        Colonia Pirai
+                                    </h2>
+                                </div>
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0219674352184!2d-63.71578588556537!3d-16.524988588600745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMxJzMwLjAiUyA2M8KwNDInNDkuMCJX!5e0!3m2!1ses!2sbo!4v1561858035928!5m2!1ses!2sbo"
+                                        style="border: 0px none;" allowfullscreen="" width="600" height="450" frameborder="0"></iframe>
+                                </div>
+                                <div class="info-card">
+                                    <h3>
+                                        Miguel Fleig Alba
+                                    </h3>
+                                    <p>
+                                        +591 71320503
+                                    </p>
+                                    <a id="email" href="mailto:pirai@agropartners.com.bo">
+                                        <p>
+                                            pirai@agropartners.com.bo
+                                        </p>
+                                    </a>
+                                    <p>
+                                        Zona Norte
+                                    </p>
+                                </div>
+                            </ion-card>
+                        </ion-slide>
+                        <ion-slide>
+                            <ion-card>
+                                <div class="header-card">
+                                    <h2>
+                                        San Pedro
+                                    </h2>
+                                </div>
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.014626176346!2d-63.48378178556066!3d-16.82563048841751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ5JzMyLjMiUyA2M8KwMjgnNTMuNyJX!5e0!3m2!1ses!2sbo!4v1561858091086!5m2!1ses!2sbo"
+                                        style="border: 0px none;" allowfullscreen="" width="600" height="450" frameborder="0"></iframe>
+                                </div>
+                                <div class="info-card">
+                                    <h3>
+                                        Yonny Pucho
+                                    </h3>
+                                    <p>
+                                        +591 71320504
+                                    </p>
+                                    <a id="email" href="mailto:sanpedro@agropartners.com">
+                                        <p>
+                                            sanpedro@agropartners.com
+                                        </p>
+                                    </a>
+                                    <p>
+                                        Zona Norte
+                                    </p>
+                                </div>
+                            </ion-card>
+                        </ion-slide>
+                        <ion-slide>
+                            <ion-card>
+                                <div class="header-card">
+                                    <h2>
+                                        Camara Fria Cotoca
+                                    </h2>
+                                </div>
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5874879980124!2d-62.89871828554607!3d-17.71693678788191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQzJzAxLjAiUyA2MsKwNTMnNDcuNSJX!5e0!3m2!1ses!2sbo!4v1561858141974!5m2!1ses!2sbo"
+                                        style="border: 0px none;" allowfullscreen="" width="600" height="450" frameborder="0"></iframe>
+                                </div>
+                                <div class="info-card">
+                                    <h3>
+                                        Reemberto Avila Jimenez
+                                    </h3>
+                                    <p>
+                                        +591 67898210
+                                    </p>
+                                    <a id="email" href="mailto:camaracotoca@agropartners.com.bo">
+                                        <p>
+                                            camaracotoca@agropartners.com.bo
+                                        </p>
+                                    </a>
+                                    <p>
+                                        Zona Este
+                                    </p>
+                                </div>
+                            </ion-card>
+                        </ion-slide>
+                    </ion-slides>
+                </div>
+            </div>
+        </main>
+    </div>
+</ion-content>

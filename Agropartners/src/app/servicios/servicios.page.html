@@ -1,0 +1,106 @@
+<ion-content>
+    <div class="content">
+        <header>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="home"></ion-back-button>
+            </ion-buttons>
+            <h1>
+                Servicios
+            </h1>
+        </header>
+        <main>
+            <div class="main-container">
+                <div class="slider">
+                    <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav>
+                        <ion-slide *ngFor="let s of sliderOne.slidesItems">
+                            <img src="../../assets/img/{{s.image}}">
+                        </ion-slide>
+                    </ion-slides>
+                </div>
+                <div class="info-container">
+                    <h2>
+                        ¿Qué es Protection&nbsp;Team?
+                    </h2>
+                    <p>
+                        Es un grupo de profesionales agrónomos con capacidad técnica en campo para desarrollar el potencial de productos <strong><em>AgroPartners</em></strong>, es un equipo especializado en el monitoreo de cultivos de manera anticipada
+                        y con capacidad para solucionar problemas en campo. La alerta temprana es uno de los objetivos principales de este equipo, de esta manera se proporciona una asistencia técnica personalizada para nuestros clientes.
+                    </p>
+                </div>
+
+                <div class="contact">
+                    <ion-list>
+                        <ion-list-header>
+                            <h2>
+                                CONTACTA A NUESTROS ESPECIALISTAS
+                            </h2>
+                        </ion-list-header>
+
+                        <ion-item-divider>
+                            <h2>
+                                ZONA ESTE
+                            </h2>
+                        </ion-item-divider>
+
+                        <ion-item-sliding *ngFor="let cont of contactosEste">
+                            <ion-item>
+                                <ion-label>
+                                    <h4>
+                                        {{cont.nombre}}
+                                    </h4>
+                                    <p>
+                                        {{cont.zona}}
+                                    </p>
+                                </ion-label>
+                            </ion-item>
+
+                            <ion-item-options side="end">
+                                <button class="button-option">
+                                    <a id="email" href="mailto:rfernandez@agropartners.com.bo" style="width: 100% !important; height: 100% !important">
+                                      <ion-icon name="mail" style="font-size: 20px !important"></ion-icon>
+                                    </a>
+                                  </button>
+                                <ion-item-option color="success">
+                                    <ion-icon name="call" style="font-size: 20px !important" (click)="callNow($event, cont.telefono)">
+                                    </ion-icon>
+                                </ion-item-option>
+
+                            </ion-item-options>
+                        </ion-item-sliding>
+
+                        <ion-item-divider>
+                            <h2>
+                                ZONA NORTE
+                            </h2>
+                        </ion-item-divider>
+
+                        <ion-item-sliding *ngFor="let cont of contactosNorte">
+                            <ion-item>
+                                <ion-label>
+                                    <h4>
+                                        {{cont.nombre}}
+                                    </h4>
+                                    <p>
+                                        {{cont.zona}}
+                                    </p>
+                                </ion-label>
+                            </ion-item>
+
+                            <ion-item-options side="end">
+                                <ion-item-option color="success">
+                                    <ion-icon name="call" style="font-size: 20px !important" (click)="callNow($event, cont.telefono)">
+                                    </ion-icon>
+                                </ion-item-option>
+                                <button class="button-option">
+                            <a id="email" href="mailto:{{cont.email}}">
+                              <ion-icon name="mail" style="font-size: 20px !important"></ion-icon>
+                            </a>
+                          </button>
+                            </ion-item-options>
+                        </ion-item-sliding>
+
+                    </ion-list>
+                </div>
+            </div>
+        </main>
+    </div>
+</ion-content>

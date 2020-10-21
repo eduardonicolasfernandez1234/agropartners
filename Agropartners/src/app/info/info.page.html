@@ -1,0 +1,28 @@
+<ion-content>
+    <div class="content">
+        <header>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="home"></ion-back-button>
+            </ion-buttons>
+            <h1>
+                ¿Quienes Somos?
+            </h1>
+        </header>
+        <main>
+            <div class="main-container">
+                <div class="slider">
+                    <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav>
+                        <ion-slide *ngFor="let s of sliderOne.slidesItems">
+                            <img src="{{s.image}}">
+                        </ion-slide>
+                    </ion-slides>
+                </div>
+                <div class="info-container">
+                    <p>
+                        Somos una empresa dedicada a la comercialización de insumos agrícolas comprometida en satisfacer las necesidades de nuestros clientes con productos y servicios de calidad mejorando su productividad y maximizando su rentabilidad.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+</ion-content>

@@ -1,0 +1,77 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    height: 100%;
+    overflow: hidden;
+    //background-color: #ece4cc;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 10%;
+}
+
+header>* {
+    margin: 0px;
+}
+
+header h1 {
+    margin-left: 5%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.slider {
+    height: 100%;
+}
+
+.slider>* {
+    height: 100%;
+    pointer-events: none;
+}
+
+.slider ion-slides ion-slide img {
+    object-fit: cover;
+    height: 100%;
+    pointer-events: none;
+}
+
+.info-container {
+    background-color: white;
+    position: absolute;
+    bottom: 2%;
+    z-index: 100;
+    text-align: center;
+    padding: 10px;
+    width: 85%;
+    margin-left: 15%;
+    border-radius: 15%;
+    border-top-right-radius: 0%;
+    background-color: #009267;
+    color: white;
+    opacity: 0.75;
+    height: 30%;
+    display: flex;
+}
+
+.info-container p {
+    margin: auto;
+    font-kerning: normal;
+    font-size: 2.4vh;
+    text-align: end;
+    font-variant-caps: petite-caps;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}

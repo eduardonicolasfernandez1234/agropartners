@@ -1,0 +1,89 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    height: 100%;
+    //background-color: #ece4cc;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 10%;
+}
+
+header>* {
+    margin: 0px;
+}
+
+header h1 {
+    margin-left: 10%;
+}
+
+.swiper-zoom-container>canvas,
+.swiper-zoom-container>img,
+.swiper-zoom-container>svg {
+    object-fit: cover;
+}
+
+.slider {
+    padding: 10px 5px;
+    height: 30%;
+}
+
+.slider>* {
+    height: 100%;
+}
+
+.slider ion-slides ion-slide img {
+    border-radius: 10px;
+}
+
+.info-container {
+    background-color: #009267;
+    padding: 15px 15px 30px;
+    border-radius: 5px;
+    margin: 0px 5px;
+    position: relative;
+    z-index: 100;
+    top: -60px;
+}
+
+.info-container>* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: white;
+}
+
+.info-container h2 {
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+.info-container p {
+    font-size: 14px;
+}
+
+.contact {
+    position: relative;
+    top: -50px;
+}
+
+.contact h2 {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.button-option {
+    background-color: #19a47b;
+    border-left: 1px solid #139a72;
+}
+
+.button-option>* {
+    color: white;
+}

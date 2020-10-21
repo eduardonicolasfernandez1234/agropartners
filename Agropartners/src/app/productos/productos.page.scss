@@ -1,0 +1,111 @@
+.back {
+    width: 100%;
+    height: 100%;
+    //background-color: rgb(184, 176, 166);
+    //background-image: url("../../assets/images/green-and-yellow-tractor-on-dirt-2889440.jpg");
+    background-image: url("../../assets/images/green-grass-in-tilt-shift-lens-photography-740129.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    //background-color: burlywood;
+    background-color: #54424285;
+    display: flex;
+}
+
+.header_icon {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_head {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    padding: 0px;
+    outline: none;
+}
+
+.head {
+    width: 80%;
+    height: 100%;
+    //background-color: beige;
+    margin: 0px 0px 0px auto;
+    text-align: end;
+    border-bottom: 2px solid #54424285;
+}
+
+.head h1 {
+    margin-right: 5%;
+    color: white;
+}
+
+.contenido {
+    width: 100%;
+    height: 90%;
+    padding: 30px 0px 0px 0px;
+}
+
+.contenido .cont {
+    height: 9%;
+    background-color: #59865e9f;
+    //background-color: #59865e7d;
+    margin: 5% 0px;
+    display: flex;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.cont p {
+    text-align: start;
+    margin: auto 0px auto 20px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.8;
+}
+
+.contenido_btn {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+.semilla {
+    width: 37%;
+}
+
+.herbicida {
+    width: 44%;
+}
+
+.fungicida {
+    width: 51%;
+}
+
+.insecticida {
+    width: 58%;
+}
+
+.fertilizante {
+    width: 65%;
+}
+
+.coadyugante {
+    width: 72%;
+}
+
+.tratamiento {
+    width: 80%;
+}
